@@ -11,15 +11,12 @@ import { ThemeContext } from './Component/ThemeContext';
 import { useState } from 'react';
 
 function App() {
-  const [theme, setTheme] = useState("light")
-  const changeHandle = () => {
-    setTheme((theme) => (theme === "light" ? "dark" : "light"))
-  }
+ 
 
   return (
-    <ThemeContext.Provider value={theme} >
-      <div className={theme} >
-        <button onClick={changeHandle} className={theme}>changeTheme</button>
+    <ThemeContext.Provider >
+      <div  >
+        
         <BrowserRouter >
           <NavbarCom />
 
